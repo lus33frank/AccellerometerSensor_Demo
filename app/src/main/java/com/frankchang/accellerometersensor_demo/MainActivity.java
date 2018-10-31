@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         show = findViewById(R.id.tvShow);
 
+        // 取得傳感器物件
         managers = (SensorManager) getSystemService(SENSOR_SERVICE);
         if (managers != null) {
             sensor = managers.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    // 監聽器
     private class sensorListener implements SensorEventListener {
 
         @Override
